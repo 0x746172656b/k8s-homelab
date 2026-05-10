@@ -450,7 +450,6 @@ externalDatabase:
   enabled: true
   type: mysql
   host: "10.10.93.135"
-  port: "3306"
   user: nextcloud-test
   password: "nextcloud-test"
   database: nextcloud-test
