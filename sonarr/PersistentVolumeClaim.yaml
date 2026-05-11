@@ -9,3 +9,4 @@ spec:
     requests:
       storage: 10Ti
   volumeName: nas-media-pv
+  storageClassName: manual
