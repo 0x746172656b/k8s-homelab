@@ -124,7 +124,7 @@ phpClientHttpsFix:
   protocol: https
 
 nextcloud:
-  host: nextcloud.kube.home
+  host: nextcloud.local.khider.fr
   username: admin
   password: changeme
   ## Use an existing secret
