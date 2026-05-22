@@ -1,9 +1,0 @@
-jellyfin:
-  service:
-    type: LoadBalancer
-    port: 8096
-  persistence:
-    config:
-      enabled: true
-      size: 5Gi
-      storageClass: "longhorn"

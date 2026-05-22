@@ -1,0 +1,15 @@
+allowVolumeExpansion: true
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+  name: synostorage-discard
+parameters:
+  dsm: 10.10.93.22
+  fsType: ext4
+  location: /volume2
+  protocl: iscsi
+provisioner: csi.san.synology.com
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
