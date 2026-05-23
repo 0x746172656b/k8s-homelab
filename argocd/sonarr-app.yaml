@@ -7,9 +7,12 @@ spec:
   project: default
   source:
     repoURL: git@github.com:0x746172656b/homelab.git
-    targetRevision: HEAD
     path: sonarr
-  destination: 
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
     server: https://kubernetes.default.svc
     namespace: media
   syncPolicy:
