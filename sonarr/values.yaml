@@ -20,7 +20,8 @@ app-template:
       type: nfs
       server: 10.10.93.22
       path: /volume1/Jellyfin
-      globalMounts: /data
+      globalMounts:
+        - path: /data
   service:
     main:
       controller: sonarr
