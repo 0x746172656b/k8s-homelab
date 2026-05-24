@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  path: ./clusters/homelab-prod/apps/sonarr
+  path: ./apps/
   prune: true
   sourceRef:
     kind: GitRepository
