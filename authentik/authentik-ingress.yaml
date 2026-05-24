@@ -1,0 +1,17 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: authentik-ingress-route
+  namespace: authentik
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`authentik.local.khider.fr`)
+      services:
+        - name: authentik-server
+          port: 80
+  tls:
+    secretName: authentik-cert
