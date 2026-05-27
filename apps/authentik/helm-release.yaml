@@ -30,6 +30,10 @@ spec:
       name: authentik-secrets
       valuesKey: password
       targetPath: authentik.postgresql.password
+     - kind: Secret
+      name: authentik-secrets
+      valuesKey: password
+      targetPath: postgresql.auth.password
   values:
     replicaCount: 1
     authentik:
