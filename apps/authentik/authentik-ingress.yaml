@@ -15,3 +15,16 @@ spec:
           port: 80
   tls:
     secretName: authentik-cert
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: authentik.local.khider.fr-cert
+  namespace: authentik
+spec:
+  secretName: authentik-cert
+  issuerRef:
+    name: cloudflare-issuer
+    kind: ClusterIssuer
+  dnsNames:
+    - authentik.local.khider.fr

@@ -1,0 +1,47 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: authentik
+  namespace: authentik
+spec:
+  interval: 15m
+  timeout: 5m
+  chart:
+    spec:
+      chart: authentik
+      version: '2026.5.0'
+      sourceRef:
+        kind: HelmRepository
+        name: authentik
+      interval: 5m
+  releaseName: authentik
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  valuesFrom:
+    - kind: Secret
+      name: authentik-secrets
+      valuesKey: secret_key
+      targetPath: authentik.secret_key
+    - kind: Secret
+      name: authentik-secrets
+      valuesKey: postgresql_password
+      targetPath: authentik.postgresql.password
+  values:
+    replicaCount: 1
+    authentik:
+        secret_key_secret: authentik-secrets
+        error_reporting:
+            enabled: false
+        postgresql:
+            password_secret: authentik-secrets
+    server:
+        ingress:
+            enabled: false
+    postgresql:
+        enabled: true
+        auth:
+            existingSecret: authentik-secrets
