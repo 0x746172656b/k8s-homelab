@@ -5,6 +5,8 @@ kind: HelmRelease
 metadata:
   name: qbittorrent
   namespace: media
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
 spec:
   interval: 10m
   chart:
