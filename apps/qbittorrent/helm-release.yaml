@@ -5,8 +5,6 @@ kind: HelmRelease
 metadata:
   name: qbittorrent
   namespace: media
-  labels:
-    pod-security.kubernetes.io/enforce: privileged
 spec:
   interval: 10m
   chart:
@@ -82,9 +80,9 @@ spec:
               runAsNonRoot: true
               runAsUser: 1001
               runAsGroup: 1001
-              volumeMounts:
-                - name: tmp
-                  mountPath: /run
+            volumeMounts:
+              - name: tmp
+                mountPath: /run
 
         containers:
           app:
