@@ -80,9 +80,6 @@ spec:
               runAsNonRoot: true
               runAsUser: 1001
               runAsGroup: 1001
-            volumeMounts:
-              - name: tmp
-                mountPath: /run
 
         containers:
           app:
@@ -121,6 +118,10 @@ spec:
         type: emptyDir
         sizeLimit: 1Gi
 
+      run:
+        type: emptyDir
+        globalMounts:
+          - path: /run
     service:
       main:
         controller: qbittorrent
