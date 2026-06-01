@@ -24,16 +24,7 @@ spec:
           main:
             image:
               repository: jellyfin/jellyfin
-              tag: 10.8.13
-            resources:
-              limits:
-                gpu.intel.com/i915: 1
-            securityContext:
-              allowPrivilegeEscalation: false
-              readOnlyRootFilesystem: false
-              capabilities:
-                drop:
-                  - ALL
+              tag: 10.11.8
     
     defaultPodOptions:
       nodeSelector:
