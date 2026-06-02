@@ -18,5 +18,9 @@ spec:
       services:
         - name: sonarr
           port: 8989
+      middlewares:
+        - name: sonarr-middleware
+          namespace: traefik
+ 
   tls:
     secretName: sonarr-cert
