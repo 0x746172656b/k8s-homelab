@@ -18,10 +18,7 @@ spec:
   values:
     ingressRoute:
       dashboard:
-        enabled: true
-        matchRule: Host(`traefik.local.khider.fr`)
-        entryPoints:
-          - web
+        enabled: false
     providers:
       kubernetesCRD:
         allowCrossNamespace: true
