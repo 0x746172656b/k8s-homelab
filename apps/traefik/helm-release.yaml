@@ -23,5 +23,5 @@ spec:
         entryPoints:
           - web
     providers:
-      kubernetesGateway:
-        enabled: false
+      kubernetesCRD:
+        allowCrossNamespace: true
