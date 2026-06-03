@@ -6,6 +6,8 @@ spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: t.khider@outlook.fr
+    privateKeySecretRef:
+      name: cloudflare-issuer-key
     solvers:
     - dns01:
         cloudflare:
