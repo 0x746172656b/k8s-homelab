@@ -9,10 +9,10 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`traefik.local.khider.fr`) 
+      match: Host(`traefik.local.khider.fr`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
       services:
-        - name: traefik
-          port: 80
+        - name: api@internal
+          kind: TraefikService
   tls:
     secretName: traefik-cert
 ---
