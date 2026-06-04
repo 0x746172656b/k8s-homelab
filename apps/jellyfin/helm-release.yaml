@@ -27,7 +27,7 @@ spec:
               tag: 10.11.8
             securityContext:
               privileged: true
-              allowPrivilegeEscalation: false
+              allowPrivilegeEscalation: true
               readOnlyRootFilesystem: false
               capabilities:
                 drop: [ ALL ]
