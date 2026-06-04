@@ -26,7 +26,7 @@ spec:
               repository: jellyfin/jellyfin
               tag: 10.11.8
             securityContext:
-              privileged: false
+              privileged: true
               allowPrivilegeEscalation: false
               readOnlyRootFilesystem: false
               capabilities:
