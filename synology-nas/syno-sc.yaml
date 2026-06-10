@@ -6,10 +6,10 @@ metadata:
     storageclass.kubernetes.io/is-default-class: "true"
   name: synostorage-discard
 parameters:
-  dsm: 10.10.93.22
+  dsm: nas.local.khider.fr
   fsType: ext4
   location: /volume2
-  protocl: iscsi
+  protocol: iscsi
 provisioner: csi.san.synology.com
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
