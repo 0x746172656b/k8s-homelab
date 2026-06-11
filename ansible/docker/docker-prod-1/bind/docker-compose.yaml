@@ -1,7 +1,7 @@
 services:
   bind9:
     container_name: dns-bind-1
-    image: ubuntu/bind9:latest
+    image: ubuntu/bind9:9.20-26.04_edge
     user: "root"
     environment:
       - BIND9_USER=root

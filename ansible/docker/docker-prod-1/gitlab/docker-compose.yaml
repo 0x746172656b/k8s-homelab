@@ -25,6 +25,3 @@ services:
 volumes:
   gitlab-ssl:
     external: true
-tarek@docker-prod-1:~/gitlab$
-
-

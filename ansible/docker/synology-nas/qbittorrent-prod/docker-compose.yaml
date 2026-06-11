@@ -1,6 +1,6 @@
 services:
   qbittorrentvpn:
-    image: binhex/arch-qbittorrentvpn:latest
+    image: binhex/arch-qbittorrentvpn:5.2
     container_name: qbittorrentvpn
     cap_add:
       - NET_ADMIN
