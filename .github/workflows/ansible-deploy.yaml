@@ -26,6 +26,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
+          touch ~/.ssh/known_hosts
           chmod 600 ~/.ssh/known_hosts
 
       - name: Run Playbook
