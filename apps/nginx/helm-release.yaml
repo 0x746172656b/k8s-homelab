@@ -1,0 +1,29 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: nginx
+  namespace: nginx
+spec:
+  interval: 15m
+  timeout: 5m
+  chart:
+    spec:
+      chart: nginx
+      version: '25.0.8'
+      sourceRef:
+        kind: HelmRepository
+        name: nginx
+      interval: 5m
+  releaseName: nginx
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    cloneStaticSiteFromGit:
+      enabled: true
+      repository: git@github.com:0x746172656b/khider.fr.git
+      branch: master
