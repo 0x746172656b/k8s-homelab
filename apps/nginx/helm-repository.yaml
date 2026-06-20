@@ -4,5 +4,6 @@ metadata:
   name: nginx
   namespace: nginx
 spec:
+  type: oci
   interval: 15m
-  url: https://charts.bitnami.com/bitnami
+  url: oci://registry-1.docker.io/bitnamicharts
