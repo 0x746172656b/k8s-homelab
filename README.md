@@ -1,4 +1,4 @@
-# k8s-homelab
+# homelab-infra
 
 A self-hosted homelab managed entirely from Git. A Talos Kubernetes cluster is
 reconciled by Flux, a set of Docker hosts is reconciled by Ansible, and public DNS is
