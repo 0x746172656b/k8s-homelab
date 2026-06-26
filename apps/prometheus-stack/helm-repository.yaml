@@ -1,8 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: certmanager
-  namespace: cert-manager
+  name: prometheus-stack
+  namespace: prometheus-stack
 spec:
   interval: 5m0s
   url: oci://ghcr.io/prometheus-community/charts/kube-prometheus-stack
